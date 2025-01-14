@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content= "width= device-width, initial-scale=1.0">
+	<title>Sito in allestimento</title>
+<style>
+	html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+
+	}
+
+	body {
+
+		background-image: url('ok.png'); /* Percorso dell'immagine */
+			
+            background-size: cover; /* Adatta l'immagine all'intera pagina */
+            background-repeat: no-repeat; /* Non ripetere l'immagine */
+            background-position: top center ; /* Centra l'immagine */
+            height: 100%; 
+            overflow: hidden;
+           
+	} 
+
+	.contenitore {
+			
+			padding: 20px;
+			color: white;
+			height: 100%;
+			width: 100%;
+			 box-sizing: border-box;
+
+	}
+
+	@media (max-width: 768px) {
+            .contenitore {
+                height: 100%; /* Modifica l'altezza su schermi più piccoli */
+                width: 100%;
+                overflow: auto;
+            }
+        }
+
+
+</style>
+</head>
+<body>
+	<div class="contenitore">
+	<!--Contenuto della pagina-->
+	</div>
+	
+	 <script>
+        window.onload = function () {
+            const img = new Image();
+            img.src = 'ok.png'; // Percorso immagine
+            img.onload = function () {
+                document.body.style.height = `${img.height}px`; // Imposta l'altezza del body
+            };
+        };
+    </script>
+
+
+</body>
+</html>
